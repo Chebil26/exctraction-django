@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Upload Success</title>
+  </head>
+  <body>
+    <div style="display: flex; gap: 20px">
+      <div style="text-align: center">
+        <h2>original image</h2>
+        <img
+          src="{{ original_image_path }}"
+          alt="Uploaded Image"
+          style="max-width: 500px"
+        />
+      </div>
+      <div style="text-align: center">
+        <h2>closest match</h2>
+        <img
+          src="{{ best_match_image_path }}"
+          alt="Uploaded Image"
+          style="max-width: 500px"
+        />
+      </div>
+    </div>
+    <h1>best distance: {{ best_distance }}</h1>
+
+    <h1>Matched Image</h1>
+    <img
+      src="data:image/png;base64,{{ processed_image }}"
+      alt="Matched Image"
+    />
+    <br /><br />
+  </body>
+</html>
